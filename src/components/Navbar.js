@@ -1,0 +1,58 @@
+import React, { Component } from 'react'
+import logo from '../assets/arms-logo.png'
+import {FaAlignRight} from 'react-icons/fa'
+import { NavLink  } from "react-router-dom";
+
+export default class 
+Navbar extends Component {
+    state = {
+        isOpen: false
+        };
+    handleToggle = () => {
+        this.setState({ isOpen: !this.state.isOpen });
+    };
+  render() {
+    return (
+        <nav className="navbar">
+        <div className="nav-center">
+          <div className="nav-header">
+            <NavLink to="/" className='nav-title'>
+              <img src={logo} alt="Arms4AI"/>
+            </NavLink>
+            <button
+              type="button"
+              className="nav-btn"
+              onClick={this.handleToggle}
+            >
+              <FaAlignRight className="nav-icon" />
+            </button>
+          </div>
+          <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"} >
+            <li>
+              <NavLink to="/" className="activeLink" onClick={this.handleToggle}><div>Home</div></NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="activeLink" onClick={this.handleToggle}><div>About</div></NavLink>
+            </li>
+            <li>
+              <NavLink to="/product" className="activeLink" onClick={this.handleToggle}><div>Product</div></NavLink>
+            </li>
+            <li>
+              <NavLink to="/industry" className="activeLink" onClick={this.handleToggle}><div>Industry verticals</div></NavLink>
+            </li>
+            <li>
+              <NavLink to="/resources" className="activeLink" onClick={this.handleToggle}><div>Resources</div></NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className="activeLink" onClick={this.handleToggle}><div>Contact</div></NavLink>
+            </li>
+            <li className="pre-nav">
+              <NavLink to="/" onClick={this.handleToggle}><div>Pre-Register</div></NavLink>
+            </li>
+          </ul>
+          <NavLink to="/"><div className="pre-register">Pre-Register</div></NavLink>
+        </div>
+      </nav>
+    )
+  }
+}
