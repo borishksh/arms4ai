@@ -1,7 +1,23 @@
-import React from 'react'
-import {FaAt,FaBuilding,FaLinkedin,FaTwitter,FaFacebook} from 'react-icons/fa'
+import React, { useRef } from 'react';
+import {FaAt,FaBuilding,FaLinkedin,FaTwitter,FaFacebook} from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+
+  const form = useRef();
+
+  const sendEmail  = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1wa0lvg', 'template_vdkb11f', form.current, '6zNrvNXC1TViiaHXe')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset();
+  };
+
   return (
     <div className='container'>
       <div className='contact-hero'>
@@ -34,27 +50,29 @@ export default function Contact() {
           </div>
         </div>
         <div className='contact-right'>
-          <div className='contact-form-row'>
-            <label>First name</label>
-            <label>Last name</label>
-            <input/>
-            <input/>
-          </div>
-          <div className='contact-form-row'>
-            <label class='contact-label-email'>Email</label>
-            <input/>
-          </div>
-          <div className='contact-form-row'>
-            <label>Organisation</label>
-            <label>Industry</label>
-            <input/>
-            <input/>
-          </div>
-          <div className='contact-form-row'>
-            <label className='contact-label-message'>Message</label>
-            <input/>
-          </div>
-          <button>Submit</button>
+          <form onSubmit={sendEmail} ref={form}>
+            <div className='contact-form-row'>
+              <label>First name</label>
+              <label>Last name</label>
+              <input className='contact-input' type='text' name='first_name' placeholder='First Name' required/>
+              <input className='contact-input' type='text' name='last_name' placeholder='Last Name' required/>
+            </div>
+            <div className='contact-form-row'>
+              <label className='contact-label-email'>Email</label>
+              <input className='contact-input email' type='email' name='email' placeholder='your@email.com' required/>
+            </div>
+            <div className='contact-form-row'>
+              <label>Organisation</label>
+              <label>Industry</label>
+              <input className='contact-input' type='text' name='organization' placeholder='Organisation' required/>
+              <input className='contact-input' type='text' name='industry' placeholder='Industry' required/>
+            </div>
+            <div className='contact-form-row'>
+              <label className='contact-label-message'>Message</label>
+              <textarea className='contact-input message' type='text' name='message' placeholder='Your message here' required/>
+            </div>
+            <input type='submit' value='Submit' className='contact-btn'/>
+          </form>
         </div>
       </div>
     </div>

@@ -1,36 +1,76 @@
-import React, { Component } from 'react'
-import Section1 from './Section1'
-import Section2 from './Section2'
-import Section3 from './Section3'
+import React, {useRef, useEffect} from 'react'
 
-export default class Sectionbar extends Component {
-    state = {
-        showDiv1 : true,
-        setShowDiv1 : true,
-        showDiv2 : false,
-        setShowDiv2 : false,
-        showDiv3 : false,
-        setShowDiv3 : false,
-        showDiv4 : false,
-        setShowDiv4 : false,
-        showDiv5 : false,
-        setShowDiv5 : false,
+export default function Sectionbar() {
+
+    const ref1 = useRef(null);
+    const ref2 = useRef(null);
+    const ref3 = useRef(null);
+    const ref4 = useRef(null);
+    const ref5 = useRef(null);
+
+    const handleClick1 = () => {
+        ref1.current?.scrollIntoView({behavior: 'smooth'});
     };
-    
-    handleButtonClick = (targetState, settargetState) => {
-        this.setState({ showDiv1: Object.keys(this.state)[0] === targetState ? true : false });
-        this.setState({ setShowDiv1: Object.keys(this.state)[1] === settargetState ? true : false });
-        this.setState({ showDiv2: Object.keys(this.state)[2] === targetState ? true : false });
-        this.setState({ setShowDiv2: Object.keys(this.state)[3] === settargetState ? true : false });
-        this.setState({ showDiv3: Object.keys(this.state)[4] === targetState ? true : false });
-        this.setState({ setShowDiv3: Object.keys(this.state)[5] === settargetState ? true : false });
-        this.setState({ showDiv4: Object.keys(this.state)[6] === targetState ? true : false });
-        this.setState({ setShowDiv4: Object.keys(this.state)[7] === settargetState ? true : false });
-        this.setState({ showDiv5: Object.keys(this.state)[8] === targetState ? true : false });
-        this.setState({ setShowDiv5: Object.keys(this.state)[9] === settargetState ? true : false });
+
+    const handleClick2 = () => {
+        ref2.current?.scrollIntoView({behavior: 'smooth'});
     };
-    
-  render() {
+
+    const handleClick3 = () => {
+        ref3.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
+    const handleClick4 = () => {
+        ref4.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
+    const handleClick5 = () => {
+        ref5.current?.scrollIntoView({behavior: 'smooth'});
+    };
+
+    useEffect(() => { 
+        var btn1 = document.getElementById('btn-1');
+        var btn2 = document.getElementById('btn-2');
+        var btn3 = document.getElementById('btn-3');
+        var btn4 = document.getElementById('btn-4');
+        var btn5 = document.getElementById('btn-5');
+        document.addEventListener('scroll', function () {
+            if(window.scrollY-ref1.current?.offsetTop>=-30) {
+                btn1.classList.add('active');
+                btn2.classList.remove('active');
+                btn3.classList.remove('active');
+                btn4.classList.remove('active');
+                btn5.classList.remove('active');
+            } if(window.scrollY-ref2.current?.offsetTop>=-30) {
+                btn1.classList.remove('active');
+                btn2.classList.add('active');
+                btn3.classList.remove('active');
+                btn4.classList.remove('active');
+                btn5.classList.remove('active');
+            } if(window.scrollY-ref3.current?.offsetTop>=-30) {
+                btn1.classList.remove('active');
+                btn2.classList.remove('active');
+                btn3.classList.add('active');
+                btn4.classList.remove('active');
+                btn5.classList.remove('active');
+            } if(window.scrollY-ref4.current?.offsetTop>=-30) {
+                btn1.classList.remove('active');
+                btn2.classList.remove('active');
+                btn3.classList.remove('active');
+                btn4.classList.add('active');
+                btn5.classList.remove('active');
+            } if(window.scrollY-ref5.current?.offsetTop>=-30) {
+                btn1.classList.remove('active');
+                btn2.classList.remove('active');
+                btn3.classList.remove('active');
+                btn4.classList.remove('active');
+                btn5.classList.add('active');
+            }
+          });
+    }, []);
+
+
+
     const args1 = [
         ["Agriculture and Energy"],
         ["Technology like Object detection and change detection is a boon for the infrastructure and retail industry. All the objects visible in satellite images like vehicles, roads, buildings etc, if utilized properly hold a massive potential in this industry. Solutions like Road Network Planning, Asset Monitoring (Detection Of Roads/Buildings), Monitoring Urbanisation, Base Map Generation are just the start point."],
@@ -62,21 +102,230 @@ export default class Sectionbar extends Component {
         ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
     ]
     return (
-      <><div className='section-bar'>
-            <button  onClick={() => this.handleButtonClick('showDiv1','setShowDiv1')} className={this.state.showDiv1 === true ? 'active' : ''}>Agriculture</button >
-            <button  onClick={() => this.handleButtonClick('showDiv2','setShowDiv2')} className={this.state.showDiv2 === true ? 'active' : ''}>Infrastructure</button >
-            <button  onClick={() => this.handleButtonClick('showDiv3','setShowDiv3')} className={this.state.showDiv3 === true ? 'active' : ''}>Environment</button >
-            <button  onClick={() => this.handleButtonClick('showDiv4','setShowDiv4')} className={this.state.showDiv4 === true ? 'active' : ''}>Defense</button >
-            <button  onClick={() => this.handleButtonClick('showDiv5','setShowDiv5')} className={this.state.showDiv5 === true ? 'active' : ''}>Academia</button >
-        </div>
-        <div>
-            {this.state.showDiv1 && <div><Section1 {...args1}/></div>}
-            {this.state.showDiv2 && <div><Section2 {...args2}/></div>}
-            {this.state.showDiv3 && <div><Section3 {...args3}/></div>}
-            {this.state.showDiv4 && <div><Section2 {...args2}/></div>}
-            {this.state.showDiv5 && <div><Section1 {...args1}/></div>}
-        </div>
-    </>
+        <>
+            <div className='section-bar'>
+                <button id='btn-1' onClick={handleClick1}>Agriculture</button >
+                <button id='btn-2' onClick={handleClick2}>Infrastructure</button >
+                <button id='btn-3' onClick={handleClick3}>Environment</button >
+                <button id='btn-4' onClick={handleClick4}>Defense</button >
+                <button id='btn-5' onClick={handleClick5}>Academia</button >
+            </div>
+            <div>
+                <div className='section1' ref={ref1}>
+                    <h1>{args1[0]}</h1>
+                    <p className='section1-p'>
+                    {args1[1]}
+                    </p>
+                    <div className='section1-details'>
+                        <div className='section1-details-image'>
+
+                        </div>
+                        <div className='section1-details-text'>
+                            <h2>{args1[2]}</h2>
+                            <p>
+                            {args1[3]}
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-image'>
+
+                        </div>
+                        <div className='section1-details-text'>
+                            <h2>{args1[4]}</h2>
+                            <p>
+                            {args1[5]}
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-image'>
+
+                        </div>
+                        <div className='section1-details-text'>
+                            <h2>{args1[6]}</h2>
+                            <p>
+                            {args1[7]}
+                            </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div className='section2' ref={ref2}>
+                    <h1>{args2[0]}</h1>
+                    <p className='section1-p'>
+                    {args2[1]}
+                    </p>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[2]}</h2>
+                                <p>
+                                {args2[3]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[4]}</h2>
+                                <p>
+                                {args2[5]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[6]}</h2>
+                                <p>
+                                {args2[7]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[8]}</h2>
+                                <p>
+                                {args2[9]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div className='section1' ref={ref3}>
+                    <h1>{args3[0]}</h1>
+                    <p className='section1-p'>
+                    {args3[1]}
+                    </p>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>{args3[2]}</h2>
+                            <p>
+                            {args3[3]}
+                            </p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>{args3[4]}</h2>
+                            <p>
+                            {args3[5]}
+                            </p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                </div>
+                <div className='section2' ref={ref4}>
+                    <h1>{args2[0]}</h1>
+                    <p className='section1-p'>
+                    {args2[1]}
+                    </p>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[2]}</h2>
+                                <p>
+                                {args2[3]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[4]}</h2>
+                                <p>
+                                {args2[5]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[6]}</h2>
+                                <p>
+                                {args2[7]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>{args2[8]}</h2>
+                                <p>
+                                {args2[9]}
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div className='section1' ref={ref5}>
+                    <h1>{args3[0]}</h1>
+                    <p className='section1-p'>
+                    {args3[1]}
+                    </p>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>{args3[2]}</h2>
+                            <p>
+                            {args3[3]}
+                            </p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>{args3[4]}</h2>
+                            <p>
+                            {args3[5]}
+                            </p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
     )
-  }
 }

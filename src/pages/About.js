@@ -32,6 +32,16 @@ About extends Component {
     this.aboutTeam.current.addEventListener("mousemove", this.dragging);
     this.aboutTeam.current.addEventListener("mouseup", this.dragStop);
     this.startInterval();
+    var img1 = document.getElementById('about-img');
+    if(img1!=null) {
+      var top = img1.offsetTop;    
+      document.addEventListener('scroll', function () {
+        if(window.scrollY>0 && window.scrollY-top+200<0) {
+          img1.style.width = (60 + (window.scrollY)/20) +'%';
+        }
+      });
+    }
+      
   }
 
   componentWillUnmount() {
@@ -98,7 +108,7 @@ render() {
           Arms4AI is a 100% Indian Startup venture based in New Delhi. We specialise in building tailored AI based Geospatial solutions by leveraging multi-disciplinary Geospatial Technologies to develop cutting-edge solutions, designed for strategic impact, decision and intelligence and to strengthen national security. We at Arms4AI provide a Revenue Maximisation Cognitive Platform for the Geospatial Industry that is a single window online platform/desktop solution with powerful image analysis solutions based on deep learning and machine learning.
         </p>
         <div className='about-hero-img'>
-          <img src={image1} alt='arms4ai' />
+          <img src={image1} alt='arms4ai' id='about-img'/>
         </div>
       </div>
       <div className='about-stat'>

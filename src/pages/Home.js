@@ -17,50 +17,6 @@ export default function Home() {
   };
   const observer = useRef(null);
 
-  const itemClick = (item) => {
-    console.log('click');
-    var elem1 = document.getElementById('item1');
-    var elem2 = document.getElementById('item2');
-    var elem3 = document.getElementById('item3');
-    var elem4 = document.getElementById('how-img-1');
-    var elem5 = document.getElementById('how-img-2');
-    var elem6 = document.getElementById('how-img-3');
-    if(elem1&&elem2&&elem3&&elem4&&elem5&&elem6){
-      if('item1' === item){
-        elem1.classList.add('active');
-        elem2.classList.remove('active');
-        elem3.classList.remove('active');
-        elem4.classList.add('active');
-        elem5.classList.remove('active');
-        elem6.classList.remove('active');
-      } if ('item2' === item) {
-        elem1.classList.remove('active');
-        elem2.classList.add('active');
-        elem3.classList.remove('active');
-        elem4.classList.remove('active');
-        elem5.classList.add('active');
-        elem6.classList.remove('active');
-      } if ('item3' === item) {
-        elem1.classList.remove('active');
-        elem2.classList.remove('active');
-        elem3.classList.add('active');
-        elem4.classList.remove('active');
-        elem5.classList.remove('active');
-        elem6.classList.add('active');
-      }
-    }
-  };
-
-  const handleItem1 = () => {
-    itemClick('item1');
-  }
-  const handleItem2 = () => {
-    itemClick('item2');
-  }
-  const handleItem3 = () => {
-    itemClick('item3');
-  }
-
   useEffect(() => {
     observer.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -80,12 +36,40 @@ export default function Home() {
     hiddenElements3.forEach((el) => observer.current.observe(el));
     
     var tech = document.getElementById('technology');
+    var above1 = document.getElementById('above-carosal1');
+    var above2 = document.getElementById('above-carosal2');
     var top = tech.offsetTop;
     document.addEventListener('scroll', function () {
       if(tech.offsetTop-top>0) {
+        above1.style.opacity = '0';
+        above2.style.opacity = '0';
         tech.style.fontSize = (40 - (tech.offsetTop-top)*0.03) +'px';
+      } else {
+        above1.style.opacity = '1';
+        above2.style.opacity = '1';
       }
-  });
+    });
+
+    var list = document.querySelectorAll('.how-list-item');
+    var ilist = document.querySelectorAll('.himg');
+    document.addEventListener('scroll', function () {
+      if(ilist.length >=3 ){
+        list.forEach((item, index) => {
+          const isActive = item.offsetTop <= window.scrollY + (window.innerWidth / 4);
+          item.classList.toggle('active', isActive);
+          ilist[index].classList.toggle('active', isActive);
+          
+          if (isActive) {
+            list.forEach((otherItem, otherIndex) => {
+              if (otherIndex !== index) {
+                otherItem.classList.remove('active');
+                ilist[otherIndex].classList.remove('active');
+              }
+            });
+          }
+        });
+      }
+    });
 
     return () => {
       observer.current.disconnect();
@@ -131,18 +115,18 @@ export default function Home() {
           </div>
           <div className='how-holder'>
             <div className='how-img'>
-              <div id='how-img-1' className='active'>
+              <div className='himg active'>
 
               </div>
-              <div id='how-img-2'>
+              <div className='himg'>
 
               </div>
-              <div id='how-img-3'>
+              <div className='himg'>
 
               </div>
             </div>
             <div className='how-list'>
-              <div className='how-list-item active' id='item1' onClick={handleItem1}>
+              <div className='how-list-item active' id='item1'>
                 <h6>
                   01
                 </h6>
@@ -153,7 +137,7 @@ export default function Home() {
                 Our platform simplifies the process of preparing satellite images with automated one click tools for data preparation. You can quickly execute basic steps like, merging, mosaicking, layer stacking, spectral index processing etc., in a seamless manner.
                 </p>
               </div>
-              <div className='how-list-item' id='item2' onClick={handleItem2}>
+              <div className='how-list-item' id='item2'>
                 <h6>
                   02
                 </h6>
@@ -164,7 +148,7 @@ export default function Home() {
                 Our platform streamlines image processing with advanced algorithms that handle image enhancement, data fusion, and integration. You can easily generate processed images with relevant features, such as vegetation indices, weather data, soil characteristics, and more, without any technical hassles.
                 </p>
               </div>
-              <div className='how-list-item' id='item3' onClick={handleItem3}>
+              <div className='how-list-item' id='item3'>
                 <h6>
                   03
                 </h6>
@@ -183,10 +167,10 @@ export default function Home() {
 
         <div className='above-carosal'>
           <div className='above-heading'>
-            <font style={{color: '#03085D'}} className='above-tech' id='technology'>Technology</font><font > is simply dummy text of the printing and typesy.</font>
+            <font style={{color: '#03085D'}} className='above-tech' id='technology'>Technology</font><font  id='above-carosal1'> is simply dummy text of the printing and typesy.</font>
           </div>
           <div className='above-details'>
-          <font>
+          <font  id='above-carosal2'>
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
           </font>
           </div>

@@ -12,7 +12,6 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import ScrollToTop from "./helpers/ScrollToTop";
 
 
-
 function App() {
   return (
     <ParallaxProvider>
