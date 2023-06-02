@@ -160,13 +160,13 @@ export default function ProductList() {
                 </div>
                 <div className='ppa-center' id='ppa-img'>
                     <div className='center-img'>
-                        <img src={args1[2].text} className='not-ripple1'/>
+                        <img src={args1[2].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                     <div className='center-img'>
-                        <img src={args1[5].text} className='not-ripple1'/>
+                        <img src={args1[5].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                     <div className='center-img'>
-                        <img src={args1[8].text} className='not-ripple1'/>
+                        <img src={args1[8].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                 </div>
                 <div className='ppa-right'>
@@ -202,10 +202,10 @@ export default function ProductList() {
                 </div>
                 <div className='ppa-center'  id='ppa-img1'>
                     <div className='center-img'>
-                        <img src={args1[2].text} className='not-ripple1'/>
+                        <img src={args1[2].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                     <div className='center-img'>
-                        <img src={args1[5].text} className='not-ripple1'/>
+                        <img src={args1[5].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                 </div>
                 <div className='ppa-right'>
@@ -253,13 +253,13 @@ export default function ProductList() {
                 </div>
                 <div className='ppa-center'  id='ppa-img2'>
                     <div className='center-img'>
-                        <img src={args1[2].text} className='not-ripple1'/>
+                        <img src={args1[2].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                     <div className='center-img'>
-                        <img src={args1[5].text} className='not-ripple1'/>
+                        <img src={args1[5].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                     <div className='center-img'>
-                        <img src={args1[8].text} className='not-ripple1'/>
+                        <img src={args1[8].text} alt="arms4ai" className='not-ripple1'/>
                     </div>
                 </div>
                 <div className='ppa-right'>

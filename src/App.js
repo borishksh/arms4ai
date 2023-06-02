@@ -10,6 +10,7 @@ import Error from './pages/Error';
 import Navbar from './components/Navbar';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ScrollToTop from "./helpers/ScrollToTop";
+import BlogDetails from './pages/BlogDetails';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/contact/" element={<Contact/>} />
           <Route path="/industry/" element={<Industry/>} />
           <Route path="/resources/" element={<Resources/>} />
+          <Route path="/blogdetails/" element={<BlogDetails/>} />
           <Route path='*' element={<Error />}/>
         </Routes>
       </BrowserRouter>
