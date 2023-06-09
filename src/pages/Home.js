@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import Client from '../components/Client';
 
 export default function Home() {
+
+
   const settings = {
     dots: true,
     infinite: false,
@@ -15,6 +17,7 @@ export default function Home() {
     slidesToShow: 2.5,
     slidesToScroll: 3,
   };
+
   const observer = useRef(null);
 
   useEffect(() => {
@@ -38,6 +41,7 @@ export default function Home() {
     var tech = document.getElementById('technology');
     var above1 = document.getElementById('above-carosal1');
     var above2 = document.getElementById('above-carosal2');
+    const hs = document.getElementById("howsub");
     var top = tech.offsetTop;
     document.addEventListener('scroll', function () {
       if(tech.offsetTop-top>0) {
@@ -47,6 +51,13 @@ export default function Home() {
       } else {
         above1.style.opacity = '1';
         above2.style.opacity = '1';
+      }
+      var rect =hs.getBoundingClientRect();
+      var isAtTop = rect.top <= 250;
+      if(isAtTop){
+        hs.classList.add("fade");
+      } else {
+        hs.classList.remove("fade");
       }
     });
 
@@ -75,6 +86,7 @@ export default function Home() {
       observer.current.disconnect();
     };
   }, []);
+
 
   return (
     <div className='container'>
@@ -108,7 +120,7 @@ export default function Home() {
             How we are doing it
             </font>
           </div>
-          <div className='how-subheading'>
+          <div className='how-subheading' id="howsub">
           <p>
           With our integrated approach of preparing, processing, and analyzing satellite images, we provide a comprehensive solution for sucrose prediction in sugarcane farming. Our technology-driven approach enables farmers to make data-driven decisions, optimize crop management practices, and improve sugarcane yield and quality.
           </p>
