@@ -113,9 +113,9 @@ export default function Sectionbar() {
             <div>
                 <div className='section1' ref={ref1}>
                     <h1>{args1[0]}</h1>
-                    <p className='section1-p'>
+                    <font className='section1-p'>
                     {args1[1]}
-                    </p>
+                    </font>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
 
@@ -155,9 +155,9 @@ export default function Sectionbar() {
                 </div>
                 <div className='section2' ref={ref2}>
                     <h1>{args2[0]}</h1>
-                    <p className='section1-p'>
+                    <font className='section1-p'>
                     {args2[1]}
-                    </p>
+                    </font>
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
@@ -213,9 +213,9 @@ export default function Sectionbar() {
                 </div>
                 <div className='section1' ref={ref3}>
                     <h1>{args3[0]}</h1>
-                    <p className='section1-p'>
+                    <font className='section1-p'>
                     {args3[1]}
-                    </p>
+                    </font>
                     <div className='section1-details'>
                         <div className='section1-details-text'>
                             <h2>{args3[2]}</h2>
@@ -241,9 +241,9 @@ export default function Sectionbar() {
                 </div>
                 <div className='section2' ref={ref4}>
                     <h1>{args2[0]}</h1>
-                    <p className='section1-p'>
+                    <font className='section1-p'>
                     {args2[1]}
-                    </p>
+                    </font>
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
@@ -299,9 +299,9 @@ export default function Sectionbar() {
                 </div>
                 <div className='section1' ref={ref5}>
                     <h1>{args3[0]}</h1>
-                    <p className='section1-p'>
+                    <font className='section1-p'>
                     {args3[1]}
-                    </p>
+                    </font>
                     <div className='section1-details'>
                         <div className='section1-details-text'>
                             <h2>{args3[2]}</h2>

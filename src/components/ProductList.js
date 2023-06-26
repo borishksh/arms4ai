@@ -73,34 +73,22 @@ export default function ProductList() {
             }
         });
 
-        function createScrollHandler(elementId) {
-            let t = 0;
-            let lastScrollTop = 0;
-                return function() {
-                    const st = window.pageYOffset || document.documentElement.scrollTop;
-                    const div = document.getElementById(elementId);
-                    if(div) {
-                        const divTop = div.getBoundingClientRect().top;
-                        if (divTop === 160) {
-                            if (t === 0) {
-                            t = st;
-                            }
-                            if (st > lastScrollTop) {
-                            div.scrollTop += (st - t);
-                            } else {
-                            div.scrollTop -= (t - st);
-                            }
-                            t = st;
-                        }
-                        lastScrollTop = st <= 0 ? 0 : st;
-                    }
-                };
+        function createScrollHandler(elementId,holder) {
+            return function() {
+                const div = document.getElementById(elementId);
+                const hold = document.getElementById(holder);
+                if(div)
+                {
+                    const divTop = div.getBoundingClientRect().top;
+                    const holdTop = hold.getBoundingClientRect().top;
+                    div.scrollTop = divTop - holdTop -150;
+                }
+            };
             }
           
-        window.addEventListener("scroll", createScrollHandler('ppa-img'), false);
-        window.addEventListener("scroll", createScrollHandler('ppa-img1'), false);
-        window.addEventListener("scroll", createScrollHandler('ppa-img2'), false);
-        
+        window.addEventListener("scroll", createScrollHandler('ppa-img','holder1'), false);
+        window.addEventListener("scroll", createScrollHandler('ppa-img1','holder2'), false);
+        window.addEventListener("scroll", createScrollHandler('ppa-img2','holder3'), false);
 
     }, []);
 
@@ -131,7 +119,7 @@ export default function ProductList() {
                 </div>
         </div>
         <div className='product-ai-holder'>
-            <div ref={ref1} className='ppa-holder'>
+            <div ref={ref1} className='ppa-holder' id="holder1">
                 <div className='ppa-right'>
                     <div className='ppa-not-none'>
                         <h3>
@@ -184,7 +172,7 @@ export default function ProductList() {
                     </div>
                 </div>
             </div>
-            <div ref={ref2} className='ppa-holder'>
+            <div ref={ref2} className='ppa-holder' id="holder2">
                 <div className='ppa-right'>
                     <div className='ppa-none'>
                     </div>
@@ -224,7 +212,7 @@ export default function ProductList() {
                     </div>
                 </div>
             </div>
-            <div ref={ref3} className='ppa-holder'>
+            <div ref={ref3} className='ppa-holder' id="holder3">
                 <div className='ppa-right'>
                     <div  className='ppa-not-none'>
                         <h3>

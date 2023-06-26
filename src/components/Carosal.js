@@ -1,16 +1,16 @@
-import React, { useRef } from 'react';
-import { goToPrevious, goToNext } from '../helpers/CarousalSlider';
+import React from 'react';
 
 export default function Carosal() {
-  const carouselRef = useRef(null);
   var i = 0;
 
   const handleGoToPrevious = () => {
-    goToPrevious(carouselRef);
     if(i===1){
       document.getElementById("carosal-img1").classList.add('show')
       document.getElementById("carosal-img2").classList.remove('show')
       document.getElementById("carosal-img3").classList.remove('show')
+      document.getElementById("carousal-text1").classList.add('show')
+      document.getElementById("carousal-text2").classList.remove('show')
+      document.getElementById("carousal-text3").classList.remove('show')
       i--;
       return;
     }
@@ -18,16 +18,21 @@ export default function Carosal() {
       document.getElementById("carosal-img1").classList.remove('show')
       document.getElementById("carosal-img2").classList.add('show')
       document.getElementById("carosal-img3").classList.remove('show')
+      document.getElementById("carousal-text1").classList.remove('show')
+      document.getElementById("carousal-text2").classList.add('show')
+      document.getElementById("carousal-text3").classList.remove('show')
       i--;
     }
   };
 
   const handleGoToNext = () => {
-    goToNext(carouselRef);
     if(i===0){
       document.getElementById("carosal-img1").classList.remove('show')
       document.getElementById("carosal-img2").classList.add('show')
       document.getElementById("carosal-img3").classList.remove('show')
+      document.getElementById("carousal-text1").classList.remove('show')
+      document.getElementById("carousal-text2").classList.add('show')
+      document.getElementById("carousal-text3").classList.remove('show')
       i++;
       return;
     }
@@ -35,6 +40,9 @@ export default function Carosal() {
       document.getElementById("carosal-img1").classList.remove('show')
       document.getElementById("carosal-img2").classList.remove('show')
       document.getElementById("carosal-img3").classList.add('show')
+      document.getElementById("carousal-text1").classList.remove('show')
+      document.getElementById("carousal-text2").classList.remove('show')
+      document.getElementById("carousal-text3").classList.add('show')
       i++;
     }
   };
@@ -42,7 +50,8 @@ export default function Carosal() {
   return (
     <div className="carosal">
         <div className='carosal-holder'>
-          <div className='carosal-left' ref={carouselRef}>
+          <div className='carosal-left'>
+            <div id="carousal-text1" className='caroual-text show'>
             <CarouselItem
               index='01'
               title='Geospatial Modeling and Analysis'
@@ -50,6 +59,8 @@ export default function Carosal() {
               handleGoToPrevious={handleGoToPrevious}
               handleGoToNext={handleGoToNext}
             />
+            </div>
+            <div id="carousal-text2" className='caroual-text'>
             <CarouselItem
               index='02'
               title='Computer Vision for High-Resolution Satellite Images'
@@ -57,6 +68,8 @@ export default function Carosal() {
               handleGoToPrevious={handleGoToPrevious}
               handleGoToNext={handleGoToNext}
             />
+            </div>
+            <div id="carousal-text3" className='caroual-text'>
             <CarouselItem
               index='03'
               title='Machine Learning for Prediction and Model Training'
@@ -64,6 +77,7 @@ export default function Carosal() {
               handleGoToPrevious={handleGoToPrevious}
               handleGoToNext={handleGoToNext}
             />
+            </div>
           </div>
           <div className='carosal-right'>
             <div id="carosal-img1" className='show'>

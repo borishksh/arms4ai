@@ -42,6 +42,8 @@ export default function Home() {
     var above1 = document.getElementById('above-carosal1');
     var above2 = document.getElementById('above-carosal2');
     const hs = document.getElementById("howsub");
+    const hh = document.getElementById("howhead");
+    const hl = document.getElementById("howlist");
     var top = tech.offsetTop;
     document.addEventListener('scroll', function () {
       if(tech.offsetTop-top>0) {
@@ -53,11 +55,26 @@ export default function Home() {
         above2.style.opacity = '1';
       }
       var rect =hs.getBoundingClientRect();
-      var isAtTop = rect.top <= 250;
+      var isAtTop = rect.top <= 300;
       if(isAtTop){
         hs.classList.add("fade");
       } else {
         hs.classList.remove("fade");
+      }
+
+      var rect1 =hh.getBoundingClientRect();
+      var rect2 =hl.getBoundingClientRect();
+      if(rect1.top<800)
+      {
+        hh.style.fontSize = '70px';
+      }
+      if(rect1.top>800)
+      {
+        hh.style.fontSize = '50px';
+      }
+      if(rect2.top<500)
+      {
+        hh.style.fontSize = '60px';
       }
     });
 
@@ -115,7 +132,7 @@ export default function Home() {
         </div>
 
         <div className='how'>
-          <div className='how-heading'>
+          <div className='how-heading' id="howhead">
             <font>
             How we are doing it
             </font>
@@ -137,7 +154,7 @@ export default function Home() {
 
               </div>
             </div>
-            <div className='how-list'>
+            <div className='how-list' id='howlist'>
               <div className='how-list-item active' id='item1'>
                 <h6>
                   01

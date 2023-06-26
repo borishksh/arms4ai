@@ -1,37 +1,64 @@
 import React,{Component} from 'react'
 import image1 from '../assets/Frame691.png';
 import Client from '../components/Client';
-import { goToPrevious, goToNext, myFunction, autoSlide } from '../helpers/CarousalSlider';
 
 export default class 
 About extends Component {
 
-  constructor(props) {
-    super(props);
-    this.aboutMission = React.createRef();
-    this.aboutTeam = React.createRef();
-    this.interval = null;
-    this.i = 0;
-    this.isDragStart = false;
-    this.isDragging = false;
-    this.prevPageX = 0;
-    this.prevScrollLeft = 0;
-    this.positionDiff = 0;
-  }
+  state = {
+    imgIndex: 1
+  };
 
   handleGoToPrevious = () => {
-    goToPrevious(this.aboutTeam);
+    var team1 = document.getElementById('team1');
+    var team2 = document.getElementById('team2');
+    var team3 = document.getElementById('team3');
+    if(this.state.imgIndex === 2)
+    {
+      team2.classList.add('front');
+      team3.classList.remove('front');
+      team1.classList.remove('front');
+
+      this.setState({
+        imgIndex: 1
+      });
+    }
+    if(this.state.imgIndex === 1)
+    {
+      team1.classList.add('front');
+      team2.classList.remove('front');
+      team3.classList.remove('front');
+      this.setState({
+        imgIndex: 0
+      });
+    }
   };
 
   handleGoToNext = () => {
-    goToNext(this.aboutTeam);
+    var team1 = document.getElementById('team1');
+    var team2 = document.getElementById('team2');
+    var team3 = document.getElementById('team3');
+    if(this.state.imgIndex === 1)
+    {
+      team3.classList.add('front');
+      team2.classList.remove('front');
+      team1.classList.remove('front');
+      this.setState({
+        imgIndex: 2
+      });
+    }
+    if(this.state.imgIndex === 0)
+    {
+      team2.classList.add('front');
+      team3.classList.remove('front');
+      team1.classList.remove('front');
+      this.setState({
+        imgIndex: 1
+      });
+    }
   };
 
   componentDidMount() {
-    this.aboutTeam.current.addEventListener("mousedown", this.dragStart);
-    this.aboutTeam.current.addEventListener("mousemove", this.dragging);
-    this.aboutTeam.current.addEventListener("mouseup", this.dragStop);
-    this.startInterval();
     var img1 = document.getElementById('about-img');
     if(img1!=null) {
       var top = img1.offsetTop;    
@@ -41,62 +68,56 @@ About extends Component {
         }
       });
     }
+    var mission1 = document.getElementById('mission1');
+    var mission2 = document.getElementById('mission2');
+    var mission3 = document.getElementById('mission3');
+    var text1 = document.getElementById('text1');
+    var text2 = document.getElementById('text2');
+    var team1 = document.getElementById('team1');
+    var team2 = document.getElementById('team2');
+    var team3 = document.getElementById('team3');
+    document.addEventListener('scroll', function () {
+      var rect1 = mission1.getBoundingClientRect();
+      var rect2 = mission2.getBoundingClientRect();
+      var rect3 = mission3.getBoundingClientRect();
+      var rect5 = text2.getBoundingClientRect();
+      if(rect1.top === 300)
+      {
+        mission1.classList.add('active');
+        mission2.classList.remove('active');
+        mission3.classList.remove('active');
+      }
+      if(rect2.top === 300)
+      {
+        mission1.classList.remove('active');
+        mission2.classList.add('active');
+        mission3.classList.remove('active');
+      }
+      if(rect3.top <= 300)
+      {
+        mission1.classList.remove('active');
+        mission2.classList.remove('active');
+        mission3.classList.add('active');
+      }
+      if(rect5.top === 200)
+      {
+        text1.classList.remove('active');
+        text2.classList.add('active');
+        team1.classList.add('active');
+        team2.classList.add('active');
+        team3.classList.add('active');
+      }
+      if(rect5.top > 200)
+      {
+        text1.classList.add('active');
+        text2.classList.remove('active');
+        team1.classList.remove('active');
+        team2.classList.remove('active');
+        team3.classList.remove('active');
+      }
+    });
       
   }
-
-  componentWillUnmount() {
-    this.aboutTeam.current.removeEventListener("mousedown",this.dragStart);
-    this.aboutTeam.current.removeEventListener("mousemove", this.dragging);
-    this.aboutTeam.current.removeEventListener("mouseup", this.dragStop);
-    this.clearInterval();
-  }
-
-  startInterval() {
-    this.interval = setInterval(() => {
-      myFunction(this.aboutMission,this.i,3);
-      if(this.i >=3)
-        this.i = 0;
-      this.i = this.i + 1;
-    }, 5000);
-    
-  }
-
-  clearInterval() {
-    clearInterval(this.interval);
-  }
-
-  
-  dragStart = (e) => {
-    if(this.aboutTeam.current === null){
-      return;
-    } else {
-      this.isDragStart = true;
-      this.prevPageX = e.pageX || e.touches[0].pageX;
-      this.prevScrollLeft = this.aboutTeam.current.scrollLeft;
-    }
-  }
-  dragging = (e) =>  {
-    if(this.aboutTeam.current === null){
-      return;
-    } else {
-    if(!this.isDragStart) return;
-      e.preventDefault();
-      this.isDragStart = true;
-      this.aboutTeam.current.classList.add("dragging");
-      this.positionDiff = (e.pageX || e.touches[0].pageX) - this.prevPageX;
-      this.aboutTeam.current.scrollLeft = this.prevScrollLeft - this.positionDiff;
-    }
-  }
-  dragStop = (e) =>  {  
-    if(this.aboutTeam.current === null){
-      return;
-    } else {
-      if(!this.isDragStart) return;
-      this.isDragStart = false;
-      this.positionDiff = autoSlide(this.aboutTeam,this.positionDiff,this.prevScrollLeft);
-    }
-  } 
-  
 render() {
   return (
     <><div className='container'>
@@ -145,60 +166,40 @@ render() {
           </font>
         </div>
       </div>
-      <div className='about-mission' ref={this.aboutMission}>
-        <div className='about-slider'>
+      <div className='about-mission'>
+        <div className='about-slider active' id='mission1'>
           <h3>Join us on our Mission to transform the world with bold ideas and Innovation</h3>
           <p>  </p>
         </div>
-        <div className='about-slider'>
+        <div className='about-slider' id='mission2'>
           <h3>Join us on our <font>Mission</font> to transform the world with bold ideas and Innovation</h3>
           <p>
             Our vision is to enable the entire Global Geospatial Ecosystem with cutting edge Technology & Solutions Designed and Made in India Product. with appropriate technology and solution that solves the problem of manual scavenging and indefinite time consumption forever that open doors to analysis driven approach further.
           </p>
         </div>
-        <div className='about-slider'>
+        <div className='about-slider' id='mission3'>
           <h3>Join us on our Mission to transform the world with bold ideas and <font>Innovation</font></h3>
           <p>
             This platform is designed with the base of innovation and business  intelligence that provides the user with various solutions like reduced timelines, improved productivity, efficient time utilisation, reduced timelines and optimized business results in a single click that bridges the existing technology and capability gap. Data is the new oil in today’s time and having the domain expertise to use this data for advanced use cases in order to solve problems and generate revenue is what we aim for.
           </p>
         </div>
       </div>
-      <div className='about-team' ref={this.aboutTeam}>
+      <div className='about-team'>
         <div className='team-slider'>
           <div className='team-left'>
-            <h3>Team that make it happen</h3>
-            <p>Our team has a blend of vast experience starting from strategic planning and operations, over 20 years of domain expertise in geospatial technology, capabilities to build cutting edge technology driven tools, and an ability to sell at the right place and at the right moment. We have a perfect amalgamation of experience, freshness and wisdom to establish our names in the industry.</p>
-            <p>The combination of our team, domain expertise, idea conceptualisation, current market worth, business traction, network within India and abroad and most importantly wisdom to apply this technology in image analysis and produce new innovative solutions give us an edge to get in this venture.
-            </p>
-            <div className='team-button'>
-              <div onClick={this.handleGoToPrevious}>
-                ❰
-              </div>
-              <div onClick={this.handleGoToNext}>
-                ❱
-              </div>
+            <div className='team-text active' id='text1'>
+              <h3>Team that make it happen</h3>
+              <p>Our team has a blend of vast experience starting from strategic planning and operations, over 20 years of domain expertise in geospatial technology, capabilities to build cutting edge technology driven tools, and an ability to sell at the right place and at the right moment. We have a perfect amalgamation of experience, freshness and wisdom to establish our names in the industry.</p>
+              <p>The combination of our team, domain expertise, idea conceptualisation, current market worth, business traction, network within India and abroad and most importantly wisdom to apply this technology in image analysis and produce new innovative solutions give us an edge to get in this venture.
+              </p>
             </div>
-          </div>
-          <div className='team-right'>
-            <div className='team'>
-
-            </div>
-            <div className='team'>
-
-            </div>
-            <div className='team'>
-
-            </div>
-          </div>
-        </div>
-        <div className='team-slider'>
-          <div className='team-left'>
+            <div className='team-text' id='text2'>
             <font className='jagriti'>Jagriti</font><font className='dabas'>Dabas</font><font className='foco'>Founder & CEO</font>
             <p>A physics scholar, who pursued masters in geoinformatics being one of the top rankers of her university. A steadfast entrepreneur, a self learner entranced by AI and machine learning who possesses a ceaseless urge of venturing for something new in it with her expertise in AI based image analysis and deep learning algorithms.
             </p>
             <p>
               An enthusiast to work with ingenuity in advanced analytics for geospatial domain using her R&D skills. she has an eye for details and also the flair for extracting propitious information from the accessible data. A doctoral student using her attainments for her aim of being conducive to the society.</p>
-            <div className='team-button'>
+              <div className='team-button'>
               <div onClick={this.handleGoToPrevious}>
                 ❰
               </div>
@@ -206,13 +207,19 @@ render() {
                 ❱
               </div>
             </div>
+            </div>
           </div>
           <div className='team-right'>
-            <div className='co'>
+            <div className='team-img'>
+              <div className='team front' id='team2'>
 
-            </div>
-            <div className='co'>
+              </div>
+              <div className='team' id='team3'>
 
+              </div>
+              <div className='team' id='team1'>
+
+              </div>
             </div>
           </div>
         </div>
