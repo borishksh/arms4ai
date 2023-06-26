@@ -2122,6 +2122,11 @@ a {
   .how-subheading {
     width: 50%;
   }
+
+  .carousals{
+    display: flex;
+    overflow: hidden;
+  }
   
 
 

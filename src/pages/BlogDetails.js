@@ -57,7 +57,7 @@ export default function BlogDetails(props) {
         <div className='recent-post'>
             <div className='container'>
                 <h3 className='recent-heading'>Recent Posts</h3>
-                <div className="carosal" ref={carouselRef}>
+                <div className="carousals" ref={carouselRef}>
                     {blogs.map((blog, index) => (
                     <div className='recent-carosal-item' key={index}>
                         <img src={blog.thumbnail} alt="arms4ai" />
