@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../assets/arms-logo.png'
+import logo from '../assets/footer-logo 2.png'
 import {FaAlignRight} from 'react-icons/fa'
 import { NavLink  } from "react-router-dom";
 
@@ -13,7 +13,7 @@ Navbar extends Component {
     };
   render() {
     return (
-        <nav className="navbar">
+        <nav className="navbar" id='nav-bar'>
         <div className="nav-center">
           <div className="nav-header">
             <NavLink to="/" className='nav-title'>
@@ -43,14 +43,11 @@ Navbar extends Component {
             <li>
               <NavLink to="/resources" className="activeLink" onClick={this.handleToggle}><div>Resources</div></NavLink>
             </li>
-            <li>
-              <NavLink to="/contact" className="activeLink" onClick={this.handleToggle}><div>Contact</div></NavLink>
-            </li>
             <li className="pre-nav">
               <NavLink to="/" onClick={this.handleToggle}><div>Pre-Register</div></NavLink>
             </li>
           </ul>
-          <NavLink to="/"><div className="pre-register">Pre-Register</div></NavLink>
+          <NavLink to="/contact"><div className="pre-register">Contact us</div></NavLink>
         </div>
       </nav>
     )

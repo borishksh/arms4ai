@@ -72,49 +72,133 @@ export default function Sectionbar() {
 
 
     const args1 = [
-        ["Agriculture and Energy"],
-        ["Technology like Object detection and change detection is a boon for the infrastructure and retail industry. All the objects visible in satellite images like vehicles, roads, buildings etc, if utilized properly hold a massive potential in this industry. Solutions like Road Network Planning, Asset Monitoring (Detection Of Roads/Buildings), Monitoring Urbanisation, Base Map Generation are just the start point."],
-        ["Farm Wise Crop Yield Estimation and Prediction"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
-        ["Location Wise Sucrose Prediction"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
-        ["Crop Residue and"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
+        ["Infrastructure & Real Estate"],
+        [""],
+        ["Car Detection/Parking Lot Detection For Retailer's Profit/Loss: "],
+        ["Prediction of retailer’s profits by counting cars on the parking lots. As the number of cars on the parking lot depicts direct relationship with the revenue in a way, “more cars – more customers – more revenue”, if there is an automated algorithm to accurately detect and count cars on satellite imagery at parking lots across the globe and augment this data using other sources (e.g. socioeconomic ones) it’s possible to predict retailers’ profits."],
+        [""],
+        ["Real Time Road Quality Monitoring from Space"],
+        ["By analyzing data from various sources such as satellite imagery, sensors, and crowd-sourced inputs, this technology provides valuable insights into road conditions, change in road construction, congestion, accidents, and other issues. Its utility lies in enabling proactive monitoring, maintenance, optimizing traffic flow, and enhancing overall road safety and efficiency for drivers and authorities. "],
+        ["Building Footprint Extraction"],
+        ["This data is extremely useful for estimating property tax assessment, disaster management planning, revenue departments, telecom industry for laying 5G lines etc.        "],
+        ["Construction Monitoring: "],
+        ["Change detection technology plays a significant role in monitoring the construction activities through remote methods. Currently, it's a very stringent process to manage and monitor large scale constructions at various places. But with this technology presented in complete automation, we can easily monitor and track the construction activities at a large scale."],
     ]
     const args2 = [
-        ["Infrastructure & Real Estate"],
-        ["Technology like Object detection and change detection is a boon for the infrastructure and retail industry. All the objects visible in satellite images like vehicles, roads, buildings etc, if utilized properly hold a massive potential in this industry. Solutions like Road Network Planning, Asset Monitoring (Detection Of Roads/Buildings), Monitoring Urbanisation, Base Map Generation are just the start point."],
-        ["Farm Wise Crop Yield Estimation and Prediction"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess  and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures."],
+        ["Agriculture and Energy"],
+        [""],
+        ["Some of the use cases we are currently working on:"],
+        ["We leverage the power of AI & ML algorithms on high resolution satellite images along with the geospatial domain expertise to help stakeholders make the appropriate decisions. "],
+        ["Farm Wise Crop yield Estimation and Prediction"],
         ["Location Wise Soil Moisture Assessment"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess  and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures."],
         ["Predicting Optimum Time of Crop Harvest"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess  and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures."],
         ["Spatial Planning Framework for Agri-waste to Bioenergy"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess  and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures."],
+        ["Quantifying GHG Emission and Carbon Credits"],
     ]
     const args3 = [
         ["Dealing With Environmental Concerns"],
-        ["In today's time with one press of the button, one swipe left or right, you can open up new worlds in seconds. If the same technology is put in monitoring natural resources, it can be used quite efficiently to monitor climate change and natural disaster hit areas."],
+        [""],
         ["Tree Inventory management/Tree Count Analysis"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
         ["Automatic Land Use Land Cover Classification"],
-        ["Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural production and pattern in order to guide users about famine, maximize market returns for smallholders, and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users improve their crop yield and to reduce costs."],
+        ["Forest Cover Classifications"],
+        ["Automatic Flood Inundation Mapping`"],
+        ["Managing & Monitoring Timber Forest Tonnage "],
+        ["Surface and Ground Water Resource Optimisation"],
+        ["can be the potential solutions for all streams of people including decision makers and researchers."],
+    ]
+    const args4 = [
+        ["Timely and Actionable Insight for Defense"],
+        [""],
+        ["Surveying areas via satellite/vehicle detection:"],
+        ["A person trying to monitor and analyze the traffic pattern of vehicles moving frequently to and from military installation manually would take time to identify the vehicles of interest and further pass on the information. But an algorithm based on machine learning would be able to establish the pattern of regular flux of cars moving and thus if the change in cars pattern is observed, it would automatically raise an anomaly and would alert the person of this change."],
+        ["Tunnel Detection using Synthetic Aperture Radar (SAR)"],
+        ["data involves analyzing the radar signals collected by SAR satellites or sensors to identify underground tunnels or man-made structures hidden beneath the Earth's surface. SAR technology can penetrate the ground and provide valuable information about subsurface structures."],
+        ["Border Monitoring:"],
+        ["It takes humongous effort to guard the border area currently. With the help of Geo-AI platform, sensitive areas of borders could be "],
+        ["Settlements Detection: "],
+        ["Identifying the change in settlements in any tactical area on a daily basis is of utmost importance."],
+        ["Ships Detection: "],
+        ["Inland water security is highly influenced by the amount of ships coming and going through our ports. Managing such an amount of water transport is not possible manually and hence satellite based surveillance plays a great role in identifying and classifying the types of ships."],
+    ]
+    const args5 = [
+        ["Empowering Academicians:"],
+        [""],
     ]
     return (
         <>
-            <div className='section-bar'>
-                <button id='btn-1' onClick={handleClick1}>Agriculture</button >
-                <button id='btn-2' onClick={handleClick2}>Infrastructure</button >
-                <button id='btn-3' onClick={handleClick3}>Environment</button >
-                <button id='btn-4' onClick={handleClick4}>Defense</button >
-                <button id='btn-5' onClick={handleClick5}>Academia</button >
-            </div>
+        <div className='section-bar' style={{ position: 'sticky', zIndex:'4'}}>
+            <button id='btn-1' onClick={handleClick1}>Agriculture</button >
+            <button id='btn-2' onClick={handleClick2}>Infrastructure</button >
+            <button id='btn-3' onClick={handleClick3}>Environment</button >
+            <button id='btn-4' onClick={handleClick4}>Defense</button >
+            <button id='btn-5' onClick={handleClick5}>Academia</button >
+        </div>
+        <div className='container' style={{backgroundColor: '#EFEAF4', marginTop: '-440px', paddingTop: '300px', position: 'relative', zIndex:'2', paddingBottom: '100px'}}>
             <div>
-                <div className='section1' ref={ref1}>
+            <div className='section2' ref={ref1}>
+                    <h1 style={{marginBottom: '50px'}}>{args2[0]}</h1>
+                    <font className='section1-p'>
+                    Satellite image analysis integrated with AI algorithms can be used to assess and understand agricultural<br/>production and pattern in order to guide users about famine, maximize market returns for smallholders,<br/>and develop tailored insurance policies to mitigate the impacts of crop failures. Today, we can leverage AI<br/>and geospatial technology to predict crop yield and monitor crop health as well, which aims to help users<br/>improve their crop yield and to reduce costs.
+                    </font>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Farm Wise Crop yield Estimation and Prediction</h2>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Location Wise Soil Moisture Assessment</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Predicting Optimum Time of Crop Harvest</h2>
+                            </div>
+                            
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Spatial Planning Framework for Agri-waste to Bioenergy</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='section2-rows'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Quantifying GHG Emission and Carbon Credits</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div className='container'  style={{backgroundColor: 'white', paddingBottom: '100px'}}>
+                <div className='section1' ref={ref2}>
                     <h1>{args1[0]}</h1>
                     <font className='section1-p'>
-                    {args1[1]}
+                    Technology like Object detection and change detection is a boon for the infrastructure and<br/>retail industry. All the objects visible in satellite images like vehicles, roads, buildings etc, if<br/>utilized properly hold a massive potential in this industry. Solutions like Road Network Planning,<br/> Asset Monitoring (Detection Of Roads/Buildings), Monitoring Urbanisation, Base Map<br/>Generation are just the start point. Few use cases to mention are
                     </font>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
@@ -124,6 +208,8 @@ export default function Sectionbar() {
                             <h2>{args1[2]}</h2>
                             <p>
                             {args1[3]}
+                            <br/>
+                            {args1[4]}
                             </p>
                         </div>
                         
@@ -133,9 +219,9 @@ export default function Sectionbar() {
 
                         </div>
                         <div className='section1-details-text'>
-                            <h2>{args1[4]}</h2>
+                            <h2>{args1[5]}</h2>
                             <p>
-                            {args1[5]}
+                            {args1[6]}
                             </p>
                         </div>
                         
@@ -145,104 +231,32 @@ export default function Sectionbar() {
 
                         </div>
                         <div className='section1-details-text'>
-                            <h2>{args1[6]}</h2>
+                            <h2>{args1[7]}</h2>
                             <p>
-                            {args1[7]}
+                            {args1[8]}
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-image'>
+
+                        </div>
+                        <div className='section1-details-text'>
+                            <h2>{args1[9]}</h2>
+                            <p>
+                            {args1[10]}
                             </p>
                         </div>
                         
                     </div>
                 </div>
-                <div className='section2' ref={ref2}>
-                    <h1>{args2[0]}</h1>
-                    <font className='section1-p'>
-                    {args2[1]}
-                    </font>
-                    <div className='section2-row'>
-                        <div className='section2-details'>
-                            <div className='section2-details-image'>
-
-                            </div>
-                            <div className='section2-details-text'>
-                                <h2>{args2[2]}</h2>
-                                <p>
-                                {args2[3]}
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div className='section2-details'>
-                            <div className='section2-details-image'>
-
-                            </div>
-                            <div className='section2-details-text'>
-                                <h2>{args2[4]}</h2>
-                                <p>
-                                {args2[5]}
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div className='section2-row'>
-                        <div className='section2-details'>
-                            <div className='section2-details-image'>
-
-                            </div>
-                            <div className='section2-details-text'>
-                                <h2>{args2[6]}</h2>
-                                <p>
-                                {args2[7]}
-                                </p>
-                            </div>
-                            
-                        </div>
-                        <div className='section2-details'>
-                            <div className='section2-details-image'>
-
-                            </div>
-                            <div className='section2-details-text'>
-                                <h2>{args2[8]}</h2>
-                                <p>
-                                {args2[9]}
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div className='section1' ref={ref3}>
+        </div>
+        <div className='container'  style={{backgroundColor: '#EFEAF4', paddingBottom: '100px'}}>
+                <div className='section2' ref={ref3}>
                     <h1>{args3[0]}</h1>
                     <font className='section1-p'>
-                    {args3[1]}
-                    </font>
-                    <div className='section1-details'>
-                        <div className='section1-details-text'>
-                            <h2>{args3[2]}</h2>
-                            <p>
-                            {args3[3]}
-                            </p>
-                        </div>
-                        <div className='section1-details-image'>
-
-                        </div>
-                    </div>
-                    <div className='section1-details'>
-                        <div className='section1-details-text'>
-                            <h2>{args3[4]}</h2>
-                            <p>
-                            {args3[5]}
-                            </p>
-                        </div>
-                        <div className='section1-details-image'>
-
-                        </div>
-                    </div>
-                </div>
-                <div className='section2' ref={ref4}>
-                    <h1>{args2[0]}</h1>
-                    <font className='section1-p'>
-                    {args2[1]}
+                    In today's time with one press of the button, one swipe left or right, you can open up new<br/> worlds in seconds. If the same technology is put in monitoring natural resources, it can be<br/> used quite efficiently to monitor climate change and natural disaster hit areas.
                     </font>
                     <div className='section2-row'>
                         <div className='section2-details'>
@@ -250,10 +264,7 @@ export default function Sectionbar() {
 
                             </div>
                             <div className='section2-details-text'>
-                                <h2>{args2[2]}</h2>
-                                <p>
-                                {args2[3]}
-                                </p>
+                                <h2>{args3[2]}</h2>
                             </div>
                             
                         </div>
@@ -262,10 +273,7 @@ export default function Sectionbar() {
 
                             </div>
                             <div className='section2-details-text'>
-                                <h2>{args2[4]}</h2>
-                                <p>
-                                {args2[5]}
-                                </p>
+                                <h2>Automatic Land Use Land Cover Classification </h2>
                             </div>
                             
                         </div>
@@ -276,10 +284,7 @@ export default function Sectionbar() {
 
                             </div>
                             <div className='section2-details-text'>
-                                <h2>{args2[6]}</h2>
-                                <p>
-                                {args2[7]}
-                                </p>
+                                <h2>Forest Cover Classification</h2>
                             </div>
                             
                         </div>
@@ -288,25 +293,43 @@ export default function Sectionbar() {
 
                             </div>
                             <div className='section2-details-text'>
-                                <h2>{args2[8]}</h2>
-                                <p>
-                                {args2[9]}
-                                </p>
+                                <h2>Automatic Flood Inundation Mapping</h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div className='section2-row'>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Managing & Monitoring Timber Forest Tonnage</h2>
+                            </div>
+                        </div>
+                        <div className='section2-details'>
+                            <div className='section2-details-image'>
+
+                            </div>
+                            <div className='section2-details-text'>
+                                <h2>Surface and Ground Water Monitoring</h2>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-                <div className='section1' ref={ref5}>
-                    <h1>{args3[0]}</h1>
+        </div>
+        <div className='container'  style={{backgroundColor: 'white', paddingBottom: '100px'}}>
+                <div className='section1' ref={ref4}>
+                    <h1>{args4[0]}</h1>
                     <font className='section1-p'>
-                    {args3[1]}
+                    Defense agencies acquire enormous amounts of visual surveillance data a day from various<br/> sources and hence the challenge remains not collecting the data, but processing it for <br/>strategic information, and this is where machine vision and AI could be of use. AI based<br/>analytics, therefore, helps defense leaders make better decisions by identifying objects of <br/>military significance:
                     </font>
                     <div className='section1-details'>
                         <div className='section1-details-text'>
-                            <h2>{args3[2]}</h2>
+                            <h2>{args4[2]}</h2>
                             <p>
-                            {args3[3]}
+                            A person trying to monitor and analyze the traffic pattern of vehicles moving frequently to and from military installation manually would take time to identify the vehicles of interest and further pass on the information. But an algorithm based on machine learning would be able to establish the pattern of regular flux of cars moving and thus if the change in cars pattern is observed, it would automatically raise an anomaly and would alert the person of this change.
                             </p>
                         </div>
                         <div className='section1-details-image'>
@@ -315,15 +338,43 @@ export default function Sectionbar() {
                     </div>
                     <div className='section1-details'>
                         <div className='section1-details-text'>
-                            <h2>{args3[4]}</h2>
+                            <h2>Tunnel Detection using Synthetic Aperture Radar (SAR)</h2>
                             <p>
-                            {args3[5]}
+                            Data involves analyzing the radar signals collected by SAR satellites or sensors to identify underground tunnels or man-made structures hidden beneath the Earth's surface. SAR technology can penetrate the ground and provide valuable information about subsurface structures.
                             </p>
                         </div>
                         <div className='section1-details-image'>
 
                         </div>
                     </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>Border Monitoring</h2>
+                            <p>
+                            It takes humongous effort to guard the border area currently. With the help of Geo-AI platform, sensitive areas of borders could be 
+                            </p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                    <div className='section1-details'>
+                        <div className='section1-details-text'>
+                            <h2>Settlements Detection</h2>
+                            <p>: Identifying the change in settlements in any tactical area on a daily basis is of utmost importance.</p>
+                        </div>
+                        <div className='section1-details-image'>
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div className='container'  style={{backgroundColor: '#EFEAF4', paddingBottom: '100px'}}>
+                <div className='section1' ref={ref5} style={{marginBottom:'200px'}}>
+                    <h1>{args5[0]}</h1>
+                    <font className='section1-p'>
+                    People from the academic fraternity face regular challenges in basic satellite data preparation and end up<br/>wasting more than 70% of project time in just preparing the data for analysis. There are multiple image pre-<br/>processing tasks like image mosaic, layer stack, radiometric correction, image enhancement, study area <br/>extraction, estimation of spectral indices for analysis etc,. All these tasks are fragmented at different<br/> platforms, so managing the data for the project takes a toll. With our platform, all such tasks are available at<br/> a single click approach and entire work can be managed with complete automation.
+                    </font>
                 </div>
             </div>
         </>

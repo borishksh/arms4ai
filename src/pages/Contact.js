@@ -10,11 +10,6 @@ export default function Contact() {
     e.preventDefault();
 
     emailjs.sendForm('service_1wa0lvg', 'template_vdkb11f', form.current, '6zNrvNXC1TViiaHXe')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
     e.target.reset();
   };
 
