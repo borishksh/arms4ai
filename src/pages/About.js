@@ -162,7 +162,7 @@ render() {
     <><div className='container'>
       <div className='about-hero'>
         <h1>
-        Where Expertise Meets Innovation
+        Where Expertise <br/>Meets Innovation
         </h1>
         <p className='about-details'>
         Arms4AI is a 100% Indian Startup venture based in New Delhi. We specialize in building tailored AI based Geospatial solutions by leveraging multi-disciplinary Geospatial Technologies to develop cutting-edge solutions, designed for strategic impact, decision and intelligence and to strengthen national security. 
