@@ -254,14 +254,56 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>SIDDHAM </font> GAUR
             </h6>
             <div className='card-line'>
 
             </div>
             <div className='card-footer'>
               <p>
-              CEO & Co-Founder
+              Leading the operations
+              </p> 
+              <div>
+              <img src={twiter} alt=''/>
+              <img src={linkedn} alt=''/>
+              </div>
+              
+            </div>
+          </div>
+          <div className='team-card'>
+            <div className='team-card-img'>
+
+            </div>
+            <h6>
+            <font>HIMANSHU </font> CHINWAN
+            </h6>
+            <div className='card-line'>
+
+            </div>
+            <div className='card-footer'>
+              <p>
+              Technology Partnership Manager
+              </p> 
+              <div>
+              <img src={twiter} alt=''/>
+              <img src={linkedn} alt=''/>
+              </div>
+              
+            </div>
+          </div>
+          <div className='team-card'>
+            <div className='team-card-img'>
+
+            </div>
+            <h6>
+            <font>CHRIS </font> YADAV
+            </h6>
+            <div className='card-line'>
+
+            </div>
+            <div className='card-footer'>
+              <p>
+              Head Designer
               </p> 
               <div>
               <img src={twiter} alt=''/>
@@ -296,14 +338,14 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>HARSHIT</font> LAL
             </h6>
             <div className='card-line'>
 
             </div>
             <div className='card-footer'>
               <p>
-              CEO & Co-Founder
+              Co-Founder & CEO
               </p> 
               <div>
               <img src={twiter} alt=''/>
@@ -317,14 +359,14 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>FAGUN </font> JOSHI
             </h6>
             <div className='card-line'>
 
             </div>
             <div className='card-footer'>
               <p>
-              CEO & Co-Founder
+              Tech Lead
               </p> 
               <div>
               <img src={twiter} alt=''/>
@@ -338,56 +380,14 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>CHRIS </font> YADAV
             </h6>
             <div className='card-line'>
 
             </div>
             <div className='card-footer'>
               <p>
-              CEO & Co-Founder
-              </p> 
-              <div>
-              <img src={twiter} alt=''/>
-              <img src={linkedn} alt=''/>
-              </div>
-              
-            </div>
-          </div>
-          <div className='team-card'>
-            <div className='team-card-img'>
-
-            </div>
-            <h6>
-            <font>JAGRITI </font> DABAS
-            </h6>
-            <div className='card-line'>
-
-            </div>
-            <div className='card-footer'>
-              <p>
-              CEO & Co-Founder
-              </p> 
-              <div>
-              <img src={twiter} alt=''/>
-              <img src={linkedn} alt=''/>
-              </div>
-              
-            </div>
-          </div>
-          <div className='team-card'>
-            <div className='team-card-img'>
-
-            </div>
-            <h6>
-            <font>JAGRITI </font> DABAS
-            </h6>
-            <div className='card-line'>
-
-            </div>
-            <div className='card-footer'>
-              <p>
-              CEO & Co-Founder
+              Head Designer
               </p> 
               <div>
               <img src={twiter} alt=''/>
@@ -429,7 +429,7 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>HARSHIT </font> LAL
             </h6>
             <div className='card-line'>
 
@@ -450,14 +450,14 @@ render() {
 
             </div>
             <h6>
-            <font>JAGRITI </font> DABAS
+            <font>FAGUN </font> JOSHI
             </h6>
             <div className='card-line'>
 
             </div>
             <div className='card-footer'>
               <p>
-              CEO & Co-Founder
+              Tech Lead
               </p> 
               <div>
               <img src={twiter} alt=''/>
