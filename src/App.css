@@ -43,7 +43,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.7rem 2rem;
+  padding: 2rem 2rem;
   padding-bottom: 0;
   background: transparent;
   color: var(--greyText);
@@ -55,7 +55,8 @@ body {
 }
 
 .nav-header img{
-  height: 45px;
+  width: auto;
+  height: 60px;
 }
 
 .nav-btn {
@@ -83,7 +84,7 @@ body {
   color: var(--greyText);
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 100;
 }
 .nav-links a:hover {
@@ -329,7 +330,7 @@ a {
 
 .home-subheading {
   display: block;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 100;
   letter-spacing: 1px;
   margin-top: 200px;
@@ -1015,7 +1016,7 @@ a {
 
 .elipse4 {
   position: absolute;
-  top: 550px;
+  top: 800px;
   left: 0;
   z-index: 0;
   height: 700px;
@@ -1026,7 +1027,7 @@ a {
 .elipse5 {
   position: absolute;
   top: 570px;
-  left: 850px;
+  left: 1060px;
   z-index: 0;
   height: 20px;
   width: 20px;
@@ -1774,7 +1775,7 @@ a {
     font-weight: 100;
   }
   .nav-center {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     overflow: hidden;
@@ -2015,7 +2016,7 @@ a {
   }
 
   .home-heading {
-    font-size: 80px;
+    font-size: 100px;
     -webkit-text-stroke: 5px;
     letter-spacing: 10px;
     line-height: 110%;

@@ -153,11 +153,11 @@ export default function Home() {
         <div className='elipse4'>
           <img src={elipse2} alt=''/>
         </div>
-        <div className='elipse5'>
+        {/* <div className='elipse5'>
           <img src={elipse5} alt=''/>
-        </div>
+        </div> */}
       </div>
-      <div className='product-stat' style={{margin: '200px 0 0 0', zIndex: '3'}}>
+      <div className='product-stat' style={{margin: '400px 0 0 0', zIndex: '3'}}>
           <div className='product-stat-item'>
             <img src={group1} alt='arms4ai' style={{height:'60px', width:'60px'}}/>
             <div>
