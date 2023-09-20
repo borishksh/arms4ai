@@ -287,7 +287,7 @@ export default function Home() {
         </div>
         <div className='how-holder-small'>
           <div className='himg-small'>
-
+            
           </div>
             <div className='how-list-item-small'>
               <h6>

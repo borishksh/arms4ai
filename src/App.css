@@ -1016,7 +1016,7 @@ a {
 
 .elipse4 {
   position: absolute;
-  top: 800px;
+  top: 600px;
   left: 0;
   z-index: 0;
   height: 700px;
@@ -1455,7 +1455,7 @@ a {
   justify-content: space-between;
   position: sticky;
   position: -webkit-sticky;
-  top: 20px;
+  top: 50px;
   background-color: transparent;
   height: 100px;
   padding-top: 40px;
@@ -1803,20 +1803,22 @@ a {
   .nav-links li .active div {
     margin: 10px 0;
     padding: 8px 15px;
-    background: linear-gradient(70deg, #4644A8 0%, #FBFBFB 100%);
+    background: linear-gradient(120deg, #4644A8 40%, #161616 );
     color: var(--mainWhite);
     border-radius: 30px;
+    box-shadow: 0px 0px 4px 0px #cccaca;
   }
 
   .pre-register {
     margin: 8px 50px;
     padding: 14px 20px;
-    background: linear-gradient(70deg, #4644A8 0%, #FBFBFB 100%);
+    background: linear-gradient(120deg, #4644A8 40%, #161616);
     color: var(--mainWhite);
     border-radius: 30px;
     display: block;
     text-align: center;
     width: 120px;
+    box-shadow: 0px 0px 4px 0px #cccaca;
   }
 
   .industry-hero-images {

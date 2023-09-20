@@ -64,6 +64,7 @@ export default function Carosal() {
 
   return (
     <div className="carosal">
+      <font style={{ color: '#03085D', fontWeight: 900, fontSize: 30}}>Technology</font>
         <div className='carosal-holder'>
         <div className='carosal-right-small'>
             <div id="carosal-img11" className='show'>
