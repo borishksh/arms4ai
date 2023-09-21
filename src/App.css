@@ -178,7 +178,6 @@ a {
   background-color: transparent;
   border: none;
   background: none;
-  padding: 10px;
   margin: 10px 0px;
   font-weight: bold;
   font-size: 10px;
@@ -1027,7 +1026,7 @@ a {
 
 .elipse4 {
   position: absolute;
-  top: 700px;
+  top: 600px;
   left: 0;
   z-index: 0;
   height: 700px;
@@ -1397,7 +1396,7 @@ a {
 }
 
 .ppa-img {
-  width: 70%;
+  width: 60%;
 }
 
 .ppa-center-small {
@@ -1419,7 +1418,7 @@ a {
 
 .ppa-right p{
   padding-top: 50px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 100;
 }
 
@@ -1887,7 +1886,7 @@ a {
   }
 
   .section-bar {
-    width: 60%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 20px;
@@ -1940,17 +1939,19 @@ a {
   .section1-details-text {
     margin: 30px 0px;
     text-align: start;
-    width: 35%;
+    width: 40%;
   }
 
   .section1-details-text h2 {
     font-size: 32px;
     font-weight: 900;
     -webkit-text-stroke: 1px;
+    text-align: justify;
   }
   
   .section1-details-text p {
     font-size: 18px;
+    text-align: justify;
     padding: 0;
     margin: 0;
     font-weight: 100;
@@ -2506,7 +2507,7 @@ a {
 
 
   .ppa-left, .ppa-right, .ppa-none {
-    width: 350px;
+    width: 450px;
     z-index: 1;
   }
 
@@ -2531,12 +2532,17 @@ a {
   }
 
   .ppa-not-none h3{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 900;
     -webkit-text-stroke: 1px;
     letter-spacing: 2px;
     padding-top: 60px;
     z-index: 3;
+  }
+
+  .ppa-not-none p{
+    font-size: 24px;
+    font-weight: bold;
   }
 
   .ppa-center{

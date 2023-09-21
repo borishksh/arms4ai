@@ -22,7 +22,6 @@ import elipse5 from '../assets/Ellipse 65.png';
 import vector1 from '../assets/Vector 68.png';
 import vector2 from '../assets/Vector 69.png';
 
-
 export default function Home() {
 
   const settings = {
