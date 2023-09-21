@@ -43,7 +43,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.7rem 2rem;
+  padding: 2rem 2rem;
   padding-bottom: 0;
   background: transparent;
   color: var(--greyText);
@@ -55,7 +55,8 @@ body {
 }
 
 .nav-header img{
-  height: 45px;
+  width: auto;
+  height: 60px;
 }
 
 .nav-btn {
@@ -83,7 +84,7 @@ body {
   color: var(--greyText);
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 9px;
+  font-size: 15px;
   font-weight: 100;
 }
 .nav-links a:hover {
@@ -177,7 +178,6 @@ a {
   background-color: transparent;
   border: none;
   background: none;
-  padding: 10px;
   margin: 10px 0px;
   font-weight: bold;
   font-size: 10px;
@@ -274,19 +274,18 @@ a {
   width: 100%;
   height: 5000px;
   overflow-x: hidden;
-  top: 50px;
+  top: 0;
   position: absolute;
   z-index: -1;
 }
 
 .white-ball {
-  width: 5000px;
-  margin-left: -1750px;
-  margin-top: -120px;
+  width: 100%;
+  /* margin-left: -1750px; */
+  /* margin-top: -120px; */
   height: 5000px;
-  border-radius: 50%;
-  background-color: var(--mainWhite);
-  background-image: radial-gradient(var(--mainWhite) 40%,#4644A8 55%, var(--darkbg) 65%);
+  background-color: #0c0c0c;
+  background-image: url(../src/assets/Ellipse\ 58.png);
 }
 
 .home-heading {
@@ -330,10 +329,10 @@ a {
 
 .home-subheading {
   display: block;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 100;
   letter-spacing: 1px;
-  margin-top: 200px;
+  margin-top: 350px;
   padding-left: 120px;
 }
 
@@ -622,14 +621,14 @@ a {
 
 .carosal-right div img, .carosal-right-small div img{
   height: 761px;
-  width: 110%;
+  width: 100%;
   z-index: 3;
 }
 
 .carosal-right div::before, .carosal-right-small div::before {
   content: "";
   height: 761px;
-  width: 110%;
+  width: 100%;
   position: absolute;
   top: -5px;
   left: -5px;
@@ -1009,14 +1008,25 @@ a {
   top: 0;
   left: 0;
   z-index: 0;
-  height: 1100px;
+  height: 1400px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.elipse3-about {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  text-align: end;
+  height: 1000px;
   width: 100%;
   overflow: hidden;
 }
 
 .elipse4 {
   position: absolute;
-  top: 550px;
+  top: 700px;
   left: 0;
   z-index: 0;
   height: 700px;
@@ -1027,7 +1037,7 @@ a {
 .elipse5 {
   position: absolute;
   top: 570px;
-  left: 850px;
+  left: 1060px;
   z-index: 0;
   height: 20px;
   width: 20px;
@@ -1260,7 +1270,7 @@ a {
 }
 
 .about-blue {
-  background-color: var(--blue);
+  background-image: linear-gradient(to bottom right, #03085D , #5756A5);
   color: var(--mainWhite);
   padding: 150px 0;
 }
@@ -1386,7 +1396,7 @@ a {
 }
 
 .ppa-img {
-  width: 70%;
+  width: 60%;
 }
 
 .ppa-center-small {
@@ -1408,7 +1418,7 @@ a {
 
 .ppa-right p{
   padding-top: 50px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 100;
 }
 
@@ -1455,7 +1465,7 @@ a {
   justify-content: space-between;
   position: sticky;
   position: -webkit-sticky;
-  top: 20px;
+  top: 50px;
   background-color: transparent;
   height: 100px;
   padding-top: 40px;
@@ -1771,11 +1781,11 @@ a {
     display: none;
   }
   .section-bar button {
-    font-size: 24.62px;
-    font-weight: 100;
+    font-size: 17px;
+    font-weight: 1000;
   }
   .nav-center {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     display: flex;
     overflow: hidden;
@@ -1803,20 +1813,22 @@ a {
   .nav-links li .active div {
     margin: 10px 0;
     padding: 8px 15px;
-    background: linear-gradient(70deg, #4644A8 0%, #FBFBFB 100%);
+    background: linear-gradient(120deg, #4644A8 40%, #161616 );
     color: var(--mainWhite);
     border-radius: 30px;
+    box-shadow: 0px 0px 4px 0px #cccaca;
   }
 
   .pre-register {
     margin: 8px 50px;
     padding: 14px 20px;
-    background: linear-gradient(70deg, #4644A8 0%, #FBFBFB 100%);
+    background: linear-gradient(120deg, #4644A8 40%, #161616);
     color: var(--mainWhite);
     border-radius: 30px;
     display: block;
     text-align: center;
     width: 120px;
+    box-shadow: 0px 0px 4px 0px #cccaca;
   }
 
   .industry-hero-images {
@@ -1874,11 +1886,11 @@ a {
   }
 
   .section-bar {
-    width: 60%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     padding: 0px 20px;
-    top: 69.5px;
+    top: 120px;
   }
 
   .section1 h1 , .section2 h1 {
@@ -1927,17 +1939,19 @@ a {
   .section1-details-text {
     margin: 30px 0px;
     text-align: start;
-    width: 35%;
+    width: 40%;
   }
 
   .section1-details-text h2 {
     font-size: 32px;
     font-weight: 900;
     -webkit-text-stroke: 1px;
+    text-align: justify;
   }
   
   .section1-details-text p {
     font-size: 18px;
+    text-align: justify;
     padding: 0;
     margin: 0;
     font-weight: 100;
@@ -2016,7 +2030,7 @@ a {
   }
 
   .home-heading {
-    font-size: 80px;
+    font-size: 100px;
     -webkit-text-stroke: 5px;
     letter-spacing: 10px;
     line-height: 110%;
@@ -2049,13 +2063,14 @@ a {
   
 
   .above-carosal {
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 170px;
     display: flex;
     justify-content: space-between;
   }
 
   .above-heading {
-    margin-top: 170px;
+    margin-top: 140px;
     width: 45%;
   }
 
@@ -2175,7 +2190,7 @@ a {
 
   .phone {
     width: 100%;
-    height: 830px;
+    height: auto;
     display: block;
     margin-top: -100px;
     overflow: hidden;
@@ -2400,18 +2415,19 @@ a {
   
   .team-card {
     width: fit-content;
+    margin-bottom: 40px;
   }
 
   .team-card-list-holder {
     display: grid;
-    gap: 50px 50px;
+    justify-content: space-between;
     grid-template-columns: auto auto auto auto;
   }
 
   .team-card-img {
     height: 350px;
     width: 250px;
-    background-color: var(--greyText);
+    background-image: linear-gradient(120deg, #4AB3FF, #EBB748);
     border-radius: 20px;
   }
 
@@ -2491,7 +2507,7 @@ a {
 
 
   .ppa-left, .ppa-right, .ppa-none {
-    width: 350px;
+    width: 450px;
     z-index: 1;
   }
 
@@ -2516,12 +2532,17 @@ a {
   }
 
   .ppa-not-none h3{
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 900;
     -webkit-text-stroke: 1px;
     letter-spacing: 2px;
     padding-top: 60px;
     z-index: 3;
+  }
+
+  .ppa-not-none p{
+    font-size: 24px;
+    font-weight: bold;
   }
 
   .ppa-center{
@@ -2721,6 +2742,7 @@ a {
 
   .home-more-detail-holder {
     display: none;
+  background-image: linear-gradient();
   }
 
   .how-heading-small {

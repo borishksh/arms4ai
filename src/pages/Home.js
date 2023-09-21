@@ -22,7 +22,6 @@ import elipse5 from '../assets/Ellipse 65.png';
 import vector1 from '../assets/Vector 68.png';
 import vector2 from '../assets/Vector 69.png';
 
-
 export default function Home() {
 
   const settings = {
@@ -122,7 +121,7 @@ export default function Home() {
 
   return (
     
-    <><div className='container' style={{ backgroundColor : '#0e1012', marginTop: '-100px', paddingTop: '100px'}}>
+    <><div className='container' style={{ backgroundColor : '#000000', marginTop: '-100px', paddingTop: '100px'}}>
       <div className='home-hero'>
         <div className='home-left'>
           <div className='heading'>
@@ -153,9 +152,9 @@ export default function Home() {
         <div className='elipse4'>
           <img src={elipse2} alt=''/>
         </div>
-        <div className='elipse5'>
+        {/* <div className='elipse5'>
           <img src={elipse5} alt=''/>
-        </div>
+        </div> */}
       </div>
       <div className='product-stat' style={{margin: '200px 0 0 0', zIndex: '3'}}>
           <div className='product-stat-item'>
@@ -168,11 +167,11 @@ export default function Home() {
               Continents Serving
               </h5>
               <p style={{fontSize: '10px', fontWeight: '100'}}>
-              Operating across Asia, America, and Africa, showcasing our global presence and reach.
+              Operating across Asia, America, and Africa,<br/> showcasing our global presence and reach.
               </p>
             </div>
           </div>
-          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: 'var(--grey)', margin: '70px 20px 0 20px'}}>
+          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
 
           </div>
           <div className='product-stat-item'>
@@ -185,11 +184,11 @@ export default function Home() {
               Government Recognitions and Work Orders
               </h5>
               <p  style={{fontSize: '10px', fontWeight: '100'}}>
-              Celebrating six prestigious government recognitions and work orders, validating our commitment to excellence.
+              Celebrating six prestigious government <br/>recognitions and work orders, validating our<br/> commitment to excellence.
               </p>
             </div>
           </div>
-          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: 'var(--grey)', margin: '70px 20px 0 20px'}}>
+          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
 
           </div>
           <div className='product-stat-item'>
@@ -202,7 +201,7 @@ export default function Home() {
               Industry Verticals, 12 Ready-to-Deploy Products:
               </h5>
               <p style={{fontSize: '10px', fontWeight: '100'}}>
-              Excelling in four industry verticals with a range of twelve fully developed and ready-to-deploy products, empowering clients with cutting-edge solutions.
+              Excelling in four industry verticals with a range of twelve fully <br/> developed and ready-to-deploy products, empowering<br/> clients with cutting-edge solutions.
               </p>
             </div>
           </div>
@@ -287,7 +286,7 @@ export default function Home() {
         </div>
         <div className='how-holder-small'>
           <div className='himg-small'>
-
+            
           </div>
             <div className='how-list-item-small'>
               <h6>
@@ -337,14 +336,14 @@ export default function Home() {
   <div className='container'>
       <div className='above-carosal'>
         
-        <div className='above-heading'>
+        <div className='above-heading' style={{fontSize: 70}}>
           <font className='above-tech'>Technology Redefined</font>
         </div>
-        <div className='above-details'>
-          <font>
-          Experience the future with cutting-edge geospatial modeling, advanced computer vision, 
-           and powerful machine learning techniques to transform satellite image data into actionable insights across diverse sectors.
-          </font>
+        <div className='above-details' style={{fontSize: 22}}>
+          
+          Experience the future with cutting-edge<br/> geospatial modeling, advanced computer vision, <br/>
+           and powerful machine learning techniques to <br/>transform satellite image data into actionable <br/>insights across diverse sectors.
+          
         </div>
         
       </div>
@@ -357,7 +356,7 @@ export default function Home() {
         <div className='above-heading-small'>
           <font className='above-tech-small'>Technology</font><font> Redefined</font>
         </div>
-        <div className='above-details-small'>
+        <div className='above-details-small' style={{fontSize: 50}}>
           <font>
           Experience the future with cutting-edge geospatial modeling, advanced computer vision, 
            and powerful machine learning techniques to transform satellite image data into actionable insights across diverse sectors.

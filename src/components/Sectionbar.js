@@ -1,5 +1,22 @@
 import React, {useRef, useEffect} from 'react'
-
+import carPark from "../assets/Rectangle 76.png";
+import mapImg from "../assets/Rectangle 77.jpg";
+import mapBlue from "../assets/Rectangle 78.jpg";
+import image1 from "../assets/Rectangle 79.jpg";
+import image2 from "../assets/rect1.webp";
+import image3 from "../assets/rect2.png";
+import image4 from "../assets/rect3.gif";
+import image5 from "../assets/rect4.webp";
+import image6 from "../assets/rect5.webp";
+import image7 from "../assets/rect6.jpg";
+import def1 from "../assets/Defense1.jpg";
+import def2 from "../assets/Defense2.jpg";
+import def3 from "../assets/Defense3.jpg";
+import def4 from "../assets/Defense4.jpg";
+import agri2 from "../assets/agri2.jpeg";
+import agri3 from "../assets/agri3.jpeg";
+import agri4 from "../assets/agri4.jpeg";
+import agri5 from "../assets/agri5.jpeg";
 export default function Sectionbar() {
 
     const ref1 = useRef(null);
@@ -152,7 +169,7 @@ export default function Sectionbar() {
                         </div>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={agri2} style={{ borderRadius: 25}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Location Wise Soil Moisture Assessment</h2>
@@ -163,7 +180,7 @@ export default function Sectionbar() {
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={agri3} style={{ borderRadius: 25}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Predicting Optimum Time of Crop Harvest</h2>
@@ -172,7 +189,7 @@ export default function Sectionbar() {
                         </div>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={agri4} style={{ borderRadius: 25}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Spatial Planning Framework for Agri-waste to Bioenergy</h2>
@@ -183,7 +200,7 @@ export default function Sectionbar() {
                     <div className='section2-rows'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={agri5} style={{ borderRadius: 25}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Quantifying GHG Emission and Carbon Credits</h2>
@@ -202,11 +219,11 @@ export default function Sectionbar() {
                     </font>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
-
+                            <img src={carPark} style={{width: 835, borderRadius: 25, height: 478}}></img>
                         </div>
-                        <div className='section1-details-text'>
+                        <div className='section1-details-text' style={{paddingTop: 70}}>
                             <h2>{args1[2]}</h2>
-                            <p>
+                            <p style={{paddingTop: 20}}>
                             {args1[3]}
                             <br/>
                             {args1[4]}
@@ -216,11 +233,11 @@ export default function Sectionbar() {
                     </div>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
-
+                        <img src={mapImg} style={{width: 835, borderRadius: 25, height: 478}}></img>
                         </div>
-                        <div className='section1-details-text'>
+                        <div className='section1-details-text' style={{paddingTop: 70}}>
                             <h2>{args1[5]}</h2>
-                            <p>
+                            <p style={{paddingTop: 20}}>
                             {args1[6]}
                             </p>
                         </div>
@@ -228,11 +245,11 @@ export default function Sectionbar() {
                     </div>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
-
+                        <img src={mapBlue} style={{width: 835, borderRadius: 25, height: 478}}></img>
                         </div>
-                        <div className='section1-details-text'>
+                        <div className='section1-details-text' style={{paddingTop: 80}}>
                             <h2>{args1[7]}</h2>
-                            <p>
+                            <p style={{paddingTop: 20}}>
                             {args1[8]}
                             </p>
                         </div>
@@ -240,11 +257,11 @@ export default function Sectionbar() {
                     </div>
                     <div className='section1-details'>
                         <div className='section1-details-image'>
-
+                        <img src={image1} style={{width: 835, borderRadius: 25, height: 478}}></img>
                         </div>
-                        <div className='section1-details-text'>
+                        <div className='section1-details-text' style={{paddingTop: 70}}>
                             <h2>{args1[9]}</h2>
-                            <p>
+                            <p style={{paddingTop: 20}}>
                             {args1[10]}
                             </p>
                         </div>
@@ -261,7 +278,7 @@ export default function Sectionbar() {
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image2} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>{args3[2]}</h2>
@@ -270,7 +287,7 @@ export default function Sectionbar() {
                         </div>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image3} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Automatic Land Use Land Cover Classification </h2>
@@ -281,7 +298,7 @@ export default function Sectionbar() {
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image4} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Forest Cover Classification</h2>
@@ -290,7 +307,7 @@ export default function Sectionbar() {
                         </div>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image5} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Automatic Flood Inundation Mapping</h2>
@@ -301,7 +318,7 @@ export default function Sectionbar() {
                     <div className='section2-row'>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image6} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Managing & Monitoring Timber Forest Tonnage</h2>
@@ -309,7 +326,7 @@ export default function Sectionbar() {
                         </div>
                         <div className='section2-details'>
                             <div className='section2-details-image'>
-
+                            <img src={image7} style={{width: 680, borderRadius: 25, height: 400}}></img>
                             </div>
                             <div className='section2-details-text'>
                                 <h2>Surface and Ground Water Monitoring</h2>
@@ -333,7 +350,7 @@ export default function Sectionbar() {
                             </p>
                         </div>
                         <div className='section1-details-image'>
-
+                        <img src={def1} style={{width: 835, borderRadius: 25, height: 480}}></img>
                         </div>
                     </div>
                     <div className='section1-details'>
@@ -344,7 +361,7 @@ export default function Sectionbar() {
                             </p>
                         </div>
                         <div className='section1-details-image'>
-
+                        <img src={def2} style={{width: 835, borderRadius: 25, height: 480}}></img>
                         </div>
                     </div>
                     <div className='section1-details'>
@@ -355,7 +372,7 @@ export default function Sectionbar() {
                             </p>
                         </div>
                         <div className='section1-details-image'>
-
+                        <img src={def3} style={{width: 835, borderRadius: 25, height: 480}}></img>
                         </div>
                     </div>
                     <div className='section1-details'>
@@ -364,7 +381,7 @@ export default function Sectionbar() {
                             <p>: Identifying the change in settlements in any tactical area on a daily basis is of utmost importance.</p>
                         </div>
                         <div className='section1-details-image'>
-
+                        <img src={def4} style={{width: 835, borderRadius: 25, height: 480}}></img>
                         </div>
                     </div>
                 </div>

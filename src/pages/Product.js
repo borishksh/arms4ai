@@ -37,7 +37,7 @@ export default class Product extends Component {
             <div className='product-stat-item'>
               <img src={img1} alt='arms4ai' style={{ height: '50px', width: '50px' }} />
               <div>
-                <h5 style={{  marginBottom: '10px' }}>
+                <h5 style={{WebkitTextStroke: '0.5px', marginBottom: '10px' }}>
                   Holistic Solutions
                 </h5>
                 <p style={{fontWeight: '100', fontSize: '10px' }}>
@@ -57,7 +57,7 @@ export default class Product extends Component {
               </div>
             </div>
           </div>
-          <div className='product-stat small-state' style={{ margin: '50px auto', justifyContent: 'space-around' }}>
+          <div className='product-stat small-state' style={{ marginLeft:-20, justifyContent: 'space-around' }}>
             <div className='product-stat-item'>
               <img src={img3} alt='arms4ai' style={{ height: '50px', width: '50px' }} />
               <div>
@@ -69,7 +69,7 @@ export default class Product extends Component {
                 </p>
               </div>
             </div>
-            <div className='product-stat-item'>
+            <div className='product-stat-item' >
               <img src={img4} alt='arms4ai' style={{ height: '50px', width: '50px' }} />
               <div>
                 <h5 style={{ WebkitTextStroke: '0.5px', marginBottom: '10px' }}>
