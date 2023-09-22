@@ -18,7 +18,6 @@ import elipse1 from '../assets/Ellipse 58.png';
 import elipse2 from '../assets/Ellipse 59.png';
 import elipse3 from '../assets/Ellipse 63.png';
 import elipse4 from '../assets/Ellipse 64.png';
-import elipse5 from '../assets/Ellipse 65.png';
 import vector1 from '../assets/Vector 68.png';
 import vector2 from '../assets/Vector 69.png';
 
@@ -171,7 +170,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
+          <div className='product-divider' style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
 
           </div>
           <div className='product-stat-item'>
@@ -188,7 +187,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
+          <div className='product-divider'  style={{zIndex: 2, height: '70px', width: '2px', backgroundColor: '#1a1717', margin: '70px 30px 0 30px'}}>
 
           </div>
           <div className='product-stat-item'>
@@ -356,7 +355,7 @@ export default function Home() {
         <div className='above-heading-small'>
           <font className='above-tech-small'>Technology</font><font> Redefined</font>
         </div>
-        <div className='above-details-small' style={{fontSize: 50}}>
+        <div className='above-details-small' style={{fontSize: '14px'}}>
           <font>
           Experience the future with cutting-edge geospatial modeling, advanced computer vision, 
            and powerful machine learning techniques to transform satellite image data into actionable insights across diverse sectors.
@@ -381,9 +380,6 @@ export default function Home() {
             <h1>
               Industries we serve
             </h1>
-            <font>
-              Developing Geospatial-AI Platform to prepare, process and analyze satellite images  using  the power of deep technology and AI in information extraction process that saves 70% of cost.
-            </font>
             <button type='button' data-role='none' className='slick-arrow slick-prev'>a</button>
           </div>
           <div className='footer-right'>

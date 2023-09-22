@@ -10,7 +10,7 @@ export default function Industry() {
       <div className='indsutry-hero'>
         <h1 style={{ color: 'white' , paddingTop: '422px', position: 'relative'}}>Industry Wise Use Cases</h1>
         <div className='industry-hero-images'>
-          <div className='industry-hero-image'><img src={indus1} style={{borderRadius: 25}}></img></div>
+          <div className='industry-hero-image'><img src={indus1} style={{borderRadius: 25}} alt=''></img></div>
           <div className='industry-hero-image'></div>
           <div className='industry-hero-image'></div>
           <div className='industry-hero-image'></div>
